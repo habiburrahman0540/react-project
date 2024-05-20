@@ -1,7 +1,7 @@
 import React from 'react'
 import './review.css'
 import {FaChevronLeft, FaChevronRight, FaQuoteRight} from "react-icons/fa"
-const Review = ({name,job,image,text,prevButton,nextButton}) => {
+const Review = ({name,job,image,text,prevButton,nextButton,randonPerson}) => {
   return (
     <article className='review'>
         <div className='img-container'>
@@ -21,7 +21,7 @@ const Review = ({name,job,image,text,prevButton,nextButton}) => {
                 <FaChevronRight/>
             </button>
         </div>
-        <button className='random-btn'>Surprise Me</button>
+        <button onClick={randonPerson} className='random-btn'>Surprise Me</button>
     </article>
   )
 

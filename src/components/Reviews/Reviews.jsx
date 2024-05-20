@@ -27,13 +27,20 @@ const Reviews = () => {
     });
      
   }
+  const randonPerson = ()=>{
+    let randomNumber = Math.floor(Math.random() * people.length );
+    if(randomNumber === index){
+       randomNumber = index + 1;
+    }
+     setIndex(checkNumber(randomNumber));
+  }
   return (
     <main className='container'>
         <div className='title'>
             <h2>Our Reviews</h2>
             <div className='underline'></div>
         </div>
-        <Review name={name} image={image} text={text} job={job} prevButton={prevButton} nextButton={nextButton} />
+        <Review name={name} image={image} text={text} job={job} prevButton={prevButton} nextButton={nextButton} randonPerson={randonPerson} />
     </main>
   )
 }
