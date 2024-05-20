@@ -8,5 +8,6 @@ import Reviews from './components/Reviews/Reviews.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Reviews/>
+    <Tours/>
   </React.StrictMode>,
 )
