@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import {data} from "./data/data"
 import './App.css'
+import Loading from './components/Loading/Loading';
+import Tours from './components/Tours/Tours';
 
 function App() {
   const [persons, setPersons] = useState(data)
