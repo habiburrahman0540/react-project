@@ -5,12 +5,27 @@ import './review.css'
 const Reviews = () => {
   const [index,setIndex] = useState(1);
   const {name,job,image,text} = people[index];
-  const prevButton =()=>{
-
+  const checkNumber =(number)=>{
+    if(number > people.length -1){
+      return 0;
+    }
+    if(number < 0){
+      return people.length -1
+    }
+      return number;
   }
-  const nextButton=(index)=>{
+  const prevButton =()=>{
+    setIndex((index)=>{
+      const newIndex = index - 1;
+      return checkNumber(newIndex);
+    });
+  }
+  const nextButton=()=>{
+    setIndex((index)=>{
       const newIndex = index + 1;
-      return newIndex;
+      return checkNumber(newIndex);
+    });
+     
   }
   return (
     <main className='container'>
