@@ -1,8 +1,13 @@
 import React from 'react'
 import "./menus.css"
-const Categories = () => {
+const Categories = ({categories,filterCategory}) => {
   return (
-    <div>Categories</div>
+    <div className='btn-container'>
+        {categories.map((item,index)=>{
+            return <button type='button' key={index} className='filter-btn' onClick={()=>filterCategory(item)}>{item}</button>
+        })}
+        
+    </div>
   )
 }
 
