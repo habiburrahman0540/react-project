@@ -10,7 +10,6 @@ const Tours = () => {
     try {
       const response = await fetch(url);
       const data = await response.json();
-      console.log(data);
       setLoading(false);
       setTours(data);
     } catch (error) {
